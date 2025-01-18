@@ -87,3 +87,41 @@
     border: 2px solid rgba(192, 204, 218, 0.6);
     padding: 35px 62px;
 }
+
+/* responsive query */
+@media screen and (max-width:576px) {
+    .navbar, .nav-links, .brand{
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .banner{
+        flex-direction: column-reverse;
+    }
+    .banner-content{
+        text-align: center;
+        margin: 0 auto;
+    }
+    .banner-photo{
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .sponsors{
+        border: none;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .sponsors img{
+        display: block;
+        margin: 0 auto;
+    }
+    .sponsors img[src="logos/Walmart.svg"] {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+}
